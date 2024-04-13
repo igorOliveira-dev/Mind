@@ -41,7 +41,7 @@
   .mainInit {
     flex-direction: column;
     gap: 0;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
   }
 
   .leftInit > p {
