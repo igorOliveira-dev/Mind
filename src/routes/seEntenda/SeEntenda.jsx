@@ -1,12 +1,15 @@
-import React from 'react'
-import './seEntenda.css'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import Header from '../../elements/Header'
+import './seEntenda.css';
+
+import Header from '../../elements/Header';
 
 const SeEntenda = () => {
+  const navigate = useNavigate();
 
   const goToPesquisa = () => {
-    location = "/se-entenda-pesquisa"
+    navigate("/se-entenda-pesquisa");
   }
 
   return (
