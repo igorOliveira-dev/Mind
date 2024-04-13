@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
@@ -11,7 +11,7 @@ import SeEntenda from "./routes/seEntenda/SeEntenda";
 import Pesquisa from "./routes/pesquisa/Pesquisa";
 import SaudeGeral from "./routes/saudeGeral/SaudeGeral";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <MainRoute />,

@@ -1,14 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate, HashRouter, Link } from 'react-router-dom'
 
 import logo from '/cerebro.png'
 
 import './header.css'
 
 const Header = () => {
+  const navigate = useNavigate();
     
     const logoClick = () => {
-      location = "/"
+      navigate("/");
     }
 
     const [isOpen, setIsOpen] = useState(false);
@@ -30,14 +32,14 @@ const Header = () => {
             <div className='barHamburger'></div>
         </div>
         <div className="menu" style={{display: isOpen ? 'flex' : 'none'}}>
-          <a href="/">Início</a>
-          <a href="/se-entenda">Se entenda</a>
-          <a href="/saude-geral">Saúde geral</a>
-          <a href="/">link 4</a>
-          <a href="/">link 5</a>
-          <a href="/">link 6</a>
-          <a href="/">link 7</a>
-          <a href="/">link 8</a>
+          <Link to="/">Início</Link>
+          <Link to="/se-entenda">Se entenda</Link>
+          <Link to="/saude-geral">Saúde geral</Link>
+          <Link to="/">Link 4</Link>
+          <Link to="/">Link 5</Link>
+          <Link to="/">Link 6</Link>
+          <Link to="/">Link 7</Link>
+          <Link to="/">Link 8</Link>
         </div>
     </div>
   )

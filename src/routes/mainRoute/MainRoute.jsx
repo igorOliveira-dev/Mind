@@ -1,17 +1,20 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 import Header from '../../elements/Header'
 
 import './mainRoute.css'
 import Footer from '../../elements/Footer'
 
 const MainRoute = () => {
+  const navigate = useNavigate();
 
   const goToSeEntenda = () => {
-    location = "/se-entenda"
+    navigate("/se-entenda");
   }
 
   const goToSaudeGeral = () => {
-    location = "saude-geral"
+    navigate("/saude-geral");
   }
 
   return (
