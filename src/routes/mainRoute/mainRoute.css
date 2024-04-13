@@ -1,0 +1,173 @@
+.mainInit {
+    position: relative;
+    height: calc(100vh - (100px));
+    max-width: 100vw;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 30px;
+}
+
+.leftInit > h1 {
+    color: #cc39a4;
+    font-size: 200px;
+}
+
+.leftInit > p {
+    color: #fdfdfd;
+    font-size: 57px;
+    max-width: 500px;
+}
+
+.leftInit > p > strong {
+    color: pink;
+}
+
+.rightInit {
+  max-width: 40vw;
+  color: #fdfdfd;
+  font-size: 30px;
+}
+
+@media (max-width: 1020px) {
+  .mainInit {
+    scale: .9;
+  }
+}
+
+@media (max-width: 850px) {
+  .mainInit {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 200px;
+  }
+
+  .leftInit > p {
+    display: none;
+  }
+
+  .rightInit {
+    max-width: 550px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .leftInit > h1 {
+    font-size: 180px;
+  }
+
+  .rightInit {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 450px) {
+  .mainInit {
+    scale: .75;
+  }
+}
+
+.paginas {
+  height: calc(100vh - (150px));
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
+  grid-template-areas:
+  "btn1 btn2 btn3"
+  "btn4 btn5 btn6";
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.paginas > button {
+  border: 3px solid #cc39a4;
+  background-color: transparent;
+  color: #fdfdfd;
+  height: 150px;
+  width: 250px;
+  transition: .5s;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+}
+
+.paginas > button > h2 {
+  color: #cc39a4;
+}
+
+.paginas > button > p {
+  margin-top: 5px;
+}
+
+.paginas > button:hover {
+  scale: 1.1;
+}
+
+.btn1 {
+  grid-area: btn1;
+}
+
+.btn2 {
+  grid-area: btn2;
+}
+
+.btn3 {
+  grid-area: btn3;
+}
+
+.btn4 {
+  grid-area: btn4;
+}
+
+.btn5 {
+  grid-area: btn5;
+}
+
+.btn6 {
+  grid-area: btn6;
+}
+
+@media (max-width: 850px) {
+  .paginas {
+    grid-template-areas: 
+    "btn1 btn2"
+    "btn3 btn4"
+    "btn5 btn6";
+  }
+}
+
+@media (max-width: 550px) {
+  .paginas {
+    scale: .9;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+  }
+
+  .paginas > button:hover {
+    scale: 1;
+  }
+}
+
+@media (max-width: 490px) {
+  .paginas {
+    grid-template-areas: 
+    "btn1"
+    "btn2"
+    "btn3"
+    "btn4"
+    "btn5"
+    "btn6";
+    scale: 1;
+  }
+}

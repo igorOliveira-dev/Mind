@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 0, 242) rgb(50, 50, 50);
+  }

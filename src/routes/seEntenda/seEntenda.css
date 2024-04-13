@@ -1,0 +1,47 @@
+.seEntendaContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seEntendaInit {
+    position: relative;
+    top: 100px;
+    height: calc(100vh - (100px));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.topSeEntenda > h1 {
+    color: #cc39a4;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.topSeEntenda > p {
+    color: #fdfdfd;
+    max-width: 500px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.bottomSeEntenda > button {
+    background-color: transparent;
+    border: 2px solid #cc39a4;
+    color: #cc39a4;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: .4s;
+}
+
+.bottomSeEntenda > button:hover {
+    background-color: #cc39a440;
+    color: #ff8cf0;
+    border-color: #ff8cf0;
+}

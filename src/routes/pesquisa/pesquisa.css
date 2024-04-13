@@ -1,0 +1,120 @@
+.pesquisaContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.pesquisaInit {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 400px;
+    width: 90vw;
+    background-color: rgba(150, 150, 150, 0.3);
+    padding: 20px;
+}
+
+.containerPergunta {
+    display: flex;
+    flex-direction: column;
+    color: #fdfdfd;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.inputRadio {
+    margin-right: 10px;
+}
+
+.btnEnviarQuestionario {
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #cc39a4;
+    color: #cc39a4;
+    font-weight: bolder;
+    transition: .5s;
+}
+
+.btnEnviarQuestionario:hover {
+    background-color: #cc39a440;
+    color: #ff8cf0;
+    border-color: #ff8cf0;
+}
+
+@media (max-width: 500px) {
+    .pesquisaInit {
+        max-width: 80vw;
+    }
+}
+
+.conclusaoForm {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(37, 37, 37, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.contentConclusao {
+    height: 300px;
+    width: 600px;
+    border-radius: 40px;
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font-size: 20px;
+    color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+@media (max-width: 920px) {
+    .contentConclusao {
+        max-width: 80vw;
+    }
+}
+
+.contentConclusao > button {
+    background-color: transparent;
+    border: 2px solid #cc39a4;
+    color: #cc39a4;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: .4s;
+}
+
+.contentConclusao > button:hover {
+    background-color: #cc39a440;
+    color: #ff8cf0;
+    border-color: #ff8cf0;
+}
+
+.inputRadio {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(230, 0, 230);
+    padding: 2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-size: 50%;
+    transition: .3s;
+}
+
+.inputRadio:checked {
+    background-color: #cc39a470;
+    animation: checkedAnimation 1s .2s linear;
+}

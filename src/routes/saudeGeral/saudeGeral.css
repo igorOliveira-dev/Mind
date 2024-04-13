@@ -1,0 +1,67 @@
+.saudeGeralContent {
+    position: relative;
+    top: 100px;
+    margin: 0 20px 0 20px;
+    height: calc(100vh - (100px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.initLeft {
+    max-width: 45vw;
+}
+
+.initLeft > h1 {
+    color: #cc39a4;
+    font-size: 60px;
+}
+
+.initLeft > h2 {
+    color: #fdfdfd;
+}
+
+.initRight > img {
+    height: 400px;
+    width: 400px;
+    margin-left: 100px;
+}
+
+@media (max-width: 920px) {
+    .initRight {
+        display: none;
+    }
+    .initLeft {
+        max-width: 80vw;
+    }
+}
+
+.dietaSaudavel {
+    position: relative;
+    top: 100px;
+    height: calc(100vh - (100px));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dietaSaudavel > h1 {
+    margin: 10px;
+    font-size: 60px;
+    color: #cc39a4;
+}
+
+.dietaSaudavel > p {
+    margin: 10px;
+    color: #fdfdfd;
+    font-size: 30px;
+    max-width: 700px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.dietaSaudavel > p > strong {
+    margin-top: 50px;
+}

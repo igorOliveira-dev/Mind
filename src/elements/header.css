@@ -1,0 +1,87 @@
+.header {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    background-color: #222;
+    border-bottom: 2px solid gray;
+    z-index: 1;
+}
+
+.leftHeader {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.leftHeader > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: #fdfdfd;
+}
+
+.logo {
+    height: 50px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    transition: .4s;
+    margin-right: 40px;
+}
+
+.hamburger:hover {
+    background-color: #ffffff11;
+}
+
+.barHamburger {
+    width: 40px;
+    height: 5px;
+    background-color: #fdfdfd;
+    margin: 4px 0;
+}
+
+.menu {
+    position: fixed;
+    top: 102px;
+    right: 0;
+    background-color: rgba(40, 40, 40, 20);
+    height: calc(70vh);
+    max-width: 300px;
+    width: 70vw;
+    animation: openMenu .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+    transition: .5s;
+    border-bottom-left-radius: 40px;
+}
+
+.menu > a {
+    color: #fdfdfd;
+    padding: 15px;
+    text-decoration: none;
+}
+
+@keyframes openMenu {
+    from {
+        transform: translateX(100%);
+        border-radius: 100%;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
