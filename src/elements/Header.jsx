@@ -1,6 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
-import { useNavigate, HashRouter, Link } from 'react-router-dom'
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom'
 
 import logo from '/cerebro.png'
 
@@ -8,17 +7,34 @@ import './header.css'
 
 const Header = () => {
   const navigate = useNavigate();
-    
-    const logoClick = () => {
-      navigate("/");
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef();
+  const hamburgerRef = useRef();
+
+  const logoClick = () => {
+    navigate("/");
+  };
+
+  const hamburgerClick = (event) => {
+    event.stopPropagation(); // Prevent the event from bubbling up to the body
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const closeMenu = (event) => {
+      if (event.target !== menuRef.current && event.target !== hamburgerRef.current) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.body.addEventListener('click', closeMenu);
     }
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const hamburgerClick = () => {
-      setIsOpen(!isOpen);
-      
-    }
+    return () => {
+      document.body.removeEventListener('click', closeMenu);
+    };
+  }, [isOpen]);
 
   return (
     <div className='header'>
@@ -26,7 +42,7 @@ const Header = () => {
           <img src={logo} alt="logo" className='logo' />
           <h1>Mind</h1>
         </div>
-        <div className="hamburger" onClick={hamburgerClick}>
+        <div className="hamburger" onClick={hamburgerClick} style={{backgroundColor: isOpen ? '#ffffff30' : 'transparent'}}>
             <div className='barHamburger'></div>
             <div className='barHamburger'></div>
             <div className='barHamburger'></div>

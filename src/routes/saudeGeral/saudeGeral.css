@@ -39,17 +39,18 @@
 .dietaSaudavel {
     position: relative;
     top: 100px;
-    height: calc(100vh - (100px));
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 200px;
 }
 
-.dietaSaudavel > h1 {
+.dietaSaudavel > h1, .exercicios > h1 {
     margin: 10px;
     font-size: 60px;
     color: #cc39a4;
+    text-align: center;
 }
 
 .dietaSaudavel > p {
@@ -63,5 +64,5 @@
 }
 
 .dietaSaudavel > p > strong {
-    margin-top: 50px;
+    margin-top: 70px;
 }

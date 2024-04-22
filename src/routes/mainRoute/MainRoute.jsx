@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import Header from '../../elements/Header'
@@ -7,6 +7,12 @@ import './mainRoute.css'
 import Footer from '../../elements/Footer'
 
 const MainRoute = () => {
+
+  //scroll para o topo ao carregar a pagina
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate();
 
   const goToSeEntenda = () => {
@@ -14,7 +20,7 @@ const MainRoute = () => {
   }
 
   const goToSaudeGeral = () => {
-    navigate("/saude-geral");
+    navigate("/saude-geral");;
   }
 
   return (

@@ -40,10 +40,6 @@
     margin-right: 40px;
 }
 
-.hamburger:hover {
-    background-color: #ffffff11;
-}
-
 .barHamburger {
     width: 40px;
     height: 5px;
