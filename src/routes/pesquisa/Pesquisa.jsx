@@ -219,7 +219,7 @@ const Pesquisa = () => {
   ];
 
   const returnToInit = () => {
-    location = "/"
+    navigate("/");
   }
 
   
