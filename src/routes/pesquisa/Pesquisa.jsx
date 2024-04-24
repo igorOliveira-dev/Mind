@@ -4,6 +4,7 @@ import { useState } from 'react'
 import './pesquisa.css'
 
 import Header from '../../elements/Header'
+import { useNavigate } from 'react-router-dom'
 
 const Pesquisa = () => {
   const [respostas, setRespostas] = useState({});
@@ -218,6 +219,7 @@ const Pesquisa = () => {
     },
   ];
 
+  const navigate = useNavigate();
   const returnToInit = () => {
     navigate("/");
   }
@@ -319,13 +321,13 @@ const Pesquisa = () => {
     const total = Object.values(respostas).reduce((a, b) => a + b, 0);
     console.log(respostas);
     setShowResult(true);
-    if (total < 40) {
+    if (total < 50) {
       setTxtConclusao(txtConclusao => txtConclusao + 'Parece que você está se sentindo bem na maior parte do tempo, o que é ótimo! Continue fazendo o que está funcionando para você e lembre-se de que é normal ter dias ruins de vez em quando.')
     } else {
-      if (total < 60) {
+      if (total < 65) {
         setTxtConclusao(txtConclusao => txtConclusao + 'Você pode estar enfrentando alguns desafios ou estresse. Tente identificar quais áreas estão causando mais problemas e procure estratégias para lidar com esses problemas. Isso pode incluir coisas como fazer uma melhora em sua alimentação, praticar exercícios físicos ou falar com um amigo de confiança.')
       } else {
-        if (total < 80) {
+        if (total < 85) {
           setTxtConclusao(txtConclusao => txtConclusao + 'Parece que você está passando por um período difícil. É importante lembrar que você não está sozinho e que existem recursos disponíveis para ajudá-lo. Considere falar com um profissional de saúde mental para obter apoio adicional, além de sempre buscar uma rotina e alimentação melhores.')
         } else {
           setTxtConclusao(txtConclusao => txtConclusao + 'Você parece estar enfrentando um alto nível de estresse ou desconforto. É realmente importante procurar ajuda profissional. Falar com um profissional de saúde mental pode fornecer o suporte e as ferramentas que você precisa para se sentir melhor, também pode ser uma boa idéia ver os recursos disponíveis neste site para te auxiliar.')

@@ -83,6 +83,7 @@
 @media (max-width: 920px) {
     .contentConclusao {
         max-width: 80vw;
+        height: 400px;
     }
 }
 

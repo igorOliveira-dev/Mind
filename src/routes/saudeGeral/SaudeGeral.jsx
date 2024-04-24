@@ -27,7 +27,7 @@ const SaudeGeral = () => {
         <div className="dietaSaudavel">
           <h1>Dieta Saudável</h1>
           <p>
-            A saúde mental é tão importante quanto a saúde física. No entanto, muitas vezes negligenciamos a conexão entre a dieta e a saúde mental. A alimentação saudável não só beneficia o nosso corpo, mas também tem um impacto significativo no nosso bem-estar mental. <br />
+            É fundamental manter uma alimentação saudável para ter uma boa saúde física, sendo também algo de extrema importância para a saúde mental, portanto, é importante saber sobre a conexão entre a dieta saudável e a nossa mente.
           </p>
           <p>
             <b>Nutrientes essenciais:</b>
@@ -63,6 +63,9 @@ const SaudeGeral = () => {
 
         <div className="exercicios">
           <h1>Exercícios</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eaque velit dolor, quisquam eos iste hic eius totam iure distinctio atque odit minus nam fugiat blanditiis quo. Est, numquam nesciunt!
+          </p>
         </div>
     </div>
   )
