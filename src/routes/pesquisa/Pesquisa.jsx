@@ -311,7 +311,6 @@ const Pesquisa = () => {
       {confirmedSubmit()}
     } else {
       alert('por favor, preencha todos os campos para continuar')
-      {confirmedSubmit()}
       return;
     }
   };

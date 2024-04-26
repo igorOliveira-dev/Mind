@@ -32,7 +32,7 @@ const SaudeGeral = () => {
           <p>
             <b>Nutrientes essenciais:</b>
             <p>
-              Os nutrientes essenciais, como vitaminas, minerais, proteínas e ácidos graxos ômega-3, são vitais para o funcionamento adequado do cérebro. A falta desses nutrientes pode levar a problemas de saúde mental, como depressão e ansiedade. Por exemplo, a vitamina B12, encontrada em alimentos como peixe e ovos, é crucial para a saúde do sistema nervoso e a produção de neurotransmissores que regulam o humor.
+              Os nutrientes essenciais, como vitaminas, minerais, proteínas e ácidos graxos ômega-3, são vitais para o funcionamento adequado do cérebro. A falta desses nutrientes pode levar a problemas de saúde mental, como depressão e ansiedade. Por exemplo, a vitamina B12, encontrada em alimentos como peixe e ovos, é crucial para a saúde do sistema nervoso e a produção de neurotransmissores que regulam o humor. Busque sempre uma dieta que inclua esses nutrientes.
             </p>
           </p>
           <p>

@@ -96,7 +96,7 @@
   flex-direction: column;
   align-items: start;
   text-align: left;
-  box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+  box-shadow: 0 0 7px rgba(255, 255, 255, .5);
 }
 
 .paginas > button > h2 {
