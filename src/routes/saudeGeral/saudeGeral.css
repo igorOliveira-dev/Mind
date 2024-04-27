@@ -36,7 +36,7 @@
     }
 }
 
-.dietaSaudavel, .exercicios {
+.dietaSaudavel, .exercicios, .outrosConselhos {
     position: relative;
     top: 100px;
     text-align: center;
@@ -53,16 +53,84 @@
     text-align: center;
 }
 
-.dietaSaudavel > p, .exercicios > p {
+.dietaSaudavel > p, .exercicios > p, .outrosConselhos > .outrosConselhosContent > p {
     margin: 10px;
     color: #fdfdfd;
-    font-size: 30px;
+    font-size: 24px;
     max-width: 700px;
     text-align: center;
     margin-left: 30px;
     margin-right: 30px;
 }
 
-.dietaSaudavel > p > strong, .exercicios > p > strong {
-    margin-top: 70px;
+.dietaSaudavel > p > b, .exercicios > p > b, .outrosConselhos > .outrosConselhosContent > p > b {
+    color: #ffc4ef;
+}
+
+.outrosConselhos > hr {
+    width: 80vw;
+    margin-bottom: 50px;
+}
+
+.outrosConselhos {
+    height: 600px;
+}
+
+.outrosConselhos > .outrosConselhosContent {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.outrosConselhos > .outrosConselhosContent > p {
+    width: 500px;
+    text-align: start;
+}
+
+.outrosConselhos > .outrosConselhosContent > .rightContent > img {
+    width: 200px;
+}
+
+.outrosConselhos > .outrosConselhosContent > .rightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outrosConselhos > .outrosConselhosContent > .rightContent > button {
+    margin-top: 40px;
+    padding: 10px;
+    width: 300px;
+    background-color: transparent;
+    border: 2px solid #cc39a4;
+    color: #cc39a4;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.outrosConselhos > .outrosConselhosContent > .rightContent > button:hover {
+    background-color: #cc39a440;
+    color: #ff8cf0;
+    border-color: #ff8cf0;
+}
+
+@media (max-width: 900px) {
+    .outrosConselhos > .outrosConselhosContent > p {
+        width: 80vw;
+    }
+
+    .outrosConselhos > .outrosConselhosContent {
+        flex-direction: column;
+    }
+
+    .outrosConselhos > .outrosConselhosContent > .rightContent > img {
+        display: none;
+    }
+
+    .outrosConselhos > .outrosConselhosContent > .rightContent > button {
+        width: 80vw;
+    }
 }
