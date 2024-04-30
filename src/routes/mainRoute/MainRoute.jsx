@@ -23,6 +23,10 @@ const MainRoute = () => {
     navigate("/saude-geral");;
   }
 
+  const goToCondicoesMentais = () => {
+    navigate("/condicoes-mentais")
+  }
+
   return (
     <div>
       <Header />
@@ -40,13 +44,16 @@ const MainRoute = () => {
       <div className="paginas">
         <button className="btn1" onClick={goToSeEntenda}>
           <h2>Se entenda</h2>
-          <p>Aqui você pode saber como está o estado da sua mente e caso precise, os tratamentos e dicas</p>
+          <p>Aqui você pode saber como está o estado da sua mente e caso precise, os tratamentos e dicas.</p>
         </button>
         <button className="btn2" onClick={goToSaudeGeral}>
           <h2>Saúde geral</h2>
-          <p>Aqui você vai receber dicas de como melhorar a sua saúde, incluir exercícios e uma alimentação melhor à rotina</p>
+          <p>Aqui você vai receber dicas de como melhorar a sua saúde, incluir exercícios e uma alimentação melhor à rotina.</p>
         </button>
-        <button className="btn3">btn</button>
+        <button className="btn3" onClick={goToCondicoesMentais}>
+          <h2>Condições Mentais</h2>
+          <p>Aqui você vai entender sobre algumas condições mentais e como elas funcionam, assim é possível identificar caso você tenha alguma dessas condições.</p>
+        </button>
         <button className="btn4">btn</button>
         <button className="btn5">btn</button>
         <button className="btn6">btn</button>

@@ -10,6 +10,7 @@ import MainRoute from "./routes/mainRoute/MainRoute";
 import SeEntenda from "./routes/seEntenda/SeEntenda";
 import Pesquisa from "./routes/pesquisa/Pesquisa";
 import SaudeGeral from "./routes/saudeGeral/SaudeGeral";
+import CondicoesMentais from "./routes/condicoesMentais/CondicoesMentais";
 
 const router = createHashRouter([
   {
@@ -28,6 +29,10 @@ const router = createHashRouter([
     path: "/saude-geral",
     element: <SaudeGeral />
   },
+  {
+    path: "/condicoes-mentais",
+    element: <CondicoesMentais />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
