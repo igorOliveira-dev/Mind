@@ -27,12 +27,15 @@
     margin-left: 100px;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1050px) {
     .initRight {
         display: none;
     }
     .initLeft {
         max-width: 80vw;
+    }
+    .saudeGeralContent {
+        height: calc(90vh - (100px));
     }
 }
 
@@ -49,7 +52,7 @@
 .dietaSaudavel > h1, .exercicios > h1 {
     margin: 10px;
     font-size: 60px;
-    color: #cc39a4;
+    color: #ff8cf0;
     text-align: center;
 }
 
