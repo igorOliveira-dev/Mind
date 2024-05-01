@@ -112,9 +112,8 @@ const CondicoesMentais = () => {
           </div>
         </div>
 
-        <div className="condicaoMental depressao" style={{maxHeight: alturaDepressao}}
-        onClick={changeHeightDepressao}>
-          <h2>Depressão</h2>
+        <div className="condicaoMental depressao" style={{maxHeight: alturaDepressao}}>
+          <h2 onClick={changeHeightDepressao}>Depressão</h2>
           <div>
             A depressão é uma condição médica classificada como transtorno psiquiátrico. Esta condição é caracterizada principalmente por sentimentos persistentes de tristeza, desesperança e desinteresse, além de uma série de outros sintomas, que incluem:
             <ul>
@@ -139,9 +138,8 @@ const CondicoesMentais = () => {
           </div>
         </div>
 
-        <div className="condicaoMental ansiedade" style={{maxHeight: alturaAnsiedade}}
-        onClick={changeHeightAnsiedade}>
-          <h2>Ansiedade</h2>
+        <div className="condicaoMental ansiedade" style={{maxHeight: alturaAnsiedade}}>
+          <h2 onClick={changeHeightAnsiedade}>Ansiedade</h2>
           <div>
             A ansiedade, pópriamente dita, é a reação normal do corpo à coisas que causam preocupação ou medo, como uma apresentação em público, porém, se a ansiedade é intensa, surge sem motivo aparente e te atrapalha no dia a dia, você pode ter um transtorno de ansiedade, existem diferentes transtornos de ansiedade, como o transtorno de ansiedade generalizada, transtorno de pânico, fobias específicas, entre outros. Alguns dos sintomas mais comuns de um transtorno de ansiedade são:
             <ul>
@@ -164,9 +162,8 @@ const CondicoesMentais = () => {
           </div>
         </div>
 
-        <div className="condicaoMental esquizofrenia" style={{maxHeight: alturaEsquizofrenia}}
-        onClick={changeHeightEsquizofrenia}>
-          <h2>Esquizofrenia</h2>
+        <div className="condicaoMental esquizofrenia" style={{maxHeight: alturaEsquizofrenia}}>
+          <h2 onClick={changeHeightEsquizofrenia}>Esquizofrenia</h2>
           <div>
             A esquizofrenia é um conjunto de transtornos psiquiátricos graves e incapacitantes caracterizado por alterações no pensamento, emoções e comportamento. A esquizofrenia pode ser genética ou causada por alterações nos neurotransmissores, se manifestando entre o final da adolescência e o início da vida adulta. Os sintomas de esquizofrenia são variados, mas alguns dos mais comuns são:
             <ul>
@@ -186,9 +183,8 @@ const CondicoesMentais = () => {
           </div>
         </div>
 
-        <div className="condicaoMental transtornoObsessivoCompulsivo" style={{maxHeight: alturaTOC}}
-        onClick={changeHeightTOC}>
-          <h2>TOC</h2>
+        <div className="condicaoMental transtornoObsessivoCompulsivo" style={{maxHeight: alturaTOC}}>
+          <h2 onClick={changeHeightTOC}>TOC</h2>
           <div>
             O Transtorno Obsessivo-Compulsivo (TOC) é um distúrbio psiquiátrico de ansiedade caracterizados por pensamentos obsessivos e intrusivos que tendem a se repetir e são frequentemente negativos. Além disso, o TOC causa comportamentos compulsivos e repetitivos, geralemtente relacionado à limpeza ou organização. Os sintomas do TOC podem variar, mas esses são um dos sintomas mais comuns:
             <ul>
@@ -208,9 +204,8 @@ const CondicoesMentais = () => {
           </div>
         </div>
 
-        <div className="condicaoMental transtornoBipolar" style={{maxHeight: alturaTranstornoBipolar}}
-         onClick={changeHeightTranstornoBipolar}>
-          <h2>Transtorno bipolar</h2>
+        <div className="condicaoMental transtornoBipolar" style={{maxHeight: alturaTranstornoBipolar}}>
+          <h2 onClick={changeHeightTranstornoBipolar}>Transtorno bipolar</h2>
           <div>
             O transtorno bipolar é um disturbio psiquiátrico que provoca alterações no comportamento que levam a pessoa a oscilar entre momentos de euforia e depressão repentinamente. Essas oscilações podem variar em frequência e intensidade de acordo com cada pessoa. O transtorno bipolar geralmente começa a exibir deus sintomas na adolescência ou na vida adulta, pode ser causado por genética, desequilibrio hormonal, fisiologia cerebral, estresse e experiências traumáticas. Existem dois tipose de transtorno bipolar, sendo eles:
             <ul>
@@ -228,21 +223,18 @@ const CondicoesMentais = () => {
           </div>
         </div>
 
-        <div className="condicaoMental TranstornoDeEstresse" style={{maxHeight: alturaTranstornoEstresse}}
-         onClick={changeHeightTranstornoEstresse}>
-          <h2>Transtorno de estresse</h2>
+        <div className="condicaoMental TranstornoDeEstresse" style={{maxHeight: alturaTranstornoEstresse}}>
+          <h2 onClick={changeHeightTranstornoEstresse}>Transtorno de estresse</h2>
           <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quisquam iusto repudiandae expedita sint enim, corporis excepturi, totam debitis, laborum non eum. Ipsam adipisci laboriosam architecto incidunt ut provident explicabo!</div>
         </div>
         
-        <div className="condicaoMental borderline" style={{maxHeight: alturaBorderline}}
-         onClick={changeHeightBorderline}>
-          <h2>Borderline</h2>
+        <div className="condicaoMental borderline" style={{maxHeight: alturaBorderline}}>
+          <h2 onClick={changeHeightBorderline}>Borderline</h2>
           <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, fugiat libero! In optio fuga hic sed quos odio porro. Enim facere vel, quos corporis officia dolore fugiat illo laboriosam expedita?</div>
         </div>
 
-        <div className="condicaoMental tdah" style={{maxHeight: alturaTDAH}}
-         onClick={changeHeightTDAH}>
-          <h2>TDAH</h2>
+        <div className="condicaoMental tdah" style={{maxHeight: alturaTDAH}}>
+          <h2 onClick={changeHeightTDAH}>TDAH</h2>
           <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illum in minus? Nobis quibusdam repellat totam nihil dolorem doloremque dignissimos, odio cum molestiae provident id quo dicta architecto. Nemo, voluptatibus.</div>
         </div>
       </div>
