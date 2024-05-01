@@ -82,4 +82,60 @@
         text-align: start;
         padding-left: 5px;
     }
+
+    .condicaoMental > h2{
+        font-size: 30px;
+        padding-bottom: 18px;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 420px) {
+    .condicaoMental > h2 {
+        font-size: 7vw;
+    }
+}
+
+.condicoesMentaisContent > hr {
+    margin: 40px 0 40px 0;
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.condicoesMentaisEnd {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    color: #fdfdfd;
+    text-align: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.condicoesMentaisEnd > h2 {
+    max-width: 700px;
+    text-align: start;
+}
+
+.condicoesMentaisEnd > button {
+    margin-top: 40px;
+    padding: 10px;
+    width: 300px;
+    background-color: transparent;
+    border: 2px solid #cc39a4;
+    color: #cc39a4;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.condicoesMentaisEnd > button:hover {
+    background-color: #cc39a440;
+    color: #ff8cf0;
+    border-color: #ff8cf0;
 }

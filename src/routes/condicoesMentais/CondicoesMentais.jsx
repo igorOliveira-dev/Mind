@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import './condicoesMentais.css'
 import Header from '../../elements/Header'
@@ -9,6 +10,11 @@ const CondicoesMentais = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const navigate = useNavigate();
+    const returnToInit = () => {
+      navigate("/");
+    }
 
   // alterar altura de depressão
   const [alturaDepressao, setAlturaDepressao] = useState('48px');
@@ -220,22 +226,72 @@ const CondicoesMentais = () => {
               <li>- Pensamentos suicidas: Desejo de morte e sentimentos de desesperança, vazio e impotência.</li>
               <li>- Alterações de apetite e peso: A perda ou ganho de peso e perda do apetite.</li>
             </ul>
+            É importante saber que o transtorno bipolar é uma condição séria e é muito importante procurar um profissional para saber o tratamento adequado para ter uma melhora na qualidade de vida e estabilizar os sintomas.
           </div>
         </div>
 
         <div className="condicaoMental TranstornoDeEstresse" style={{maxHeight: alturaTranstornoEstresse}}>
           <h2 onClick={changeHeightTranstornoEstresse}>Transtorno de estresse</h2>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quisquam iusto repudiandae expedita sint enim, corporis excepturi, totam debitis, laborum non eum. Ipsam adipisci laboriosam architecto incidunt ut provident explicabo!</div>
+          <div>
+            O transtorno de estresse pode ser de dois tipos, o Transtorno de Estresse Agudo (TEA) ou o Transtorno de Estresse Pós-Traumático. O Transtorno de Estresse Agudo é uma reação intensa e desagradável que vem após um acontecimento extremamente traumático e dura geralmente menos de um mês, porém, os sintomas podem persistir e nesse caso a pessoa será diagnosticada com Transtorno de Estresse Pós-Traumático e precisará de uma ajuda profissional para buscar um tratamento adequado. Os sintomas desses transtornos de estresse podem ser:
+            <ul>
+              <li>- Memórias angustiantes incontroláveis sobre o evento.</li>
+              <li>- Sonhos recorrentes sobre o evento.</li>
+              <li>- Sensação de que esse evento acontecerá novamente.</li>
+              <li>- Sentimentos de angústia quando algo lembra o evento.</li>
+              <li>- Incapacidade persistente de sentir emoções positicas.</li>
+              <li>- Sensação de que a realidade está alterada.</li>
+              <li>- Perda da memória de uma parte importante do evento.</li>
+            </ul>
+            Caso você acredita que possui um transtorno de estresse é aconselhável buscar um profissional de saúde mental para iniciar o tratamento o quanto antes, esses tratamentos costumam incluir terapia cognitivo comportamental e talvez o uso de medicamentos como antidepressivos. Lembre-se que é importante consultar um profissional para saber o seu diagnóstico e assim iniciar um tratamento correto.
+          </div>
         </div>
         
         <div className="condicaoMental borderline" style={{maxHeight: alturaBorderline}}>
           <h2 onClick={changeHeightBorderline}>Borderline</h2>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, fugiat libero! In optio fuga hic sed quos odio porro. Enim facere vel, quos corporis officia dolore fugiat illo laboriosam expedita?</div>
+          <div>
+            O Transtorno de Personalidade Borderline (TPB) é um transtorno de saúde mental que pode causar uma forte instabilidade comportamental nas relaões interpessoais, na autoimagem e afetos. A pessoa com transtrono de personalidade borderline podem apresentar impulsividade, visão distoricida de si mesmo e dos outros, medo de abandono e reações agressivas e intenças. Alguns dos sintomas mais comuns podem ser:
+            <ul>
+              <li>- Mudanças de humor: Podem durar menos de duas horas ou até mesmo dias, variando entre momentos de ira, tristeza e ansiedade.</li>  
+              <li>- Identidade instável: Com mudanças rápidas de valores, metas e opiniões sobre carreira profissional, identidade sexual e tipos de amigos.</li>
+              <li>- Medo de abandono: Um medo constante de ser abandonado pelo parceiro, amigos ou familiares.</li>
+              <li>- Relacionamentos instáveis e intensos: Tem sentimentos que variam rapidamente de idealização da outra pessoa à desvalorização.</li>
+              <li>- Impulsividade: Envolvendo-se em jogos de apostas, gasto descontrolado de dinheiro, consumo exagerado de comida, abuso de álcool, drogas e atividades irresponsáveis.</li>
+            </ul> 
+            Se você tem sintomas como esses é extremamente indicado que você procure ajuda com um profissional de saúde mental para receber o diagnóstico e o tratamento correto, alguns dos principais tratamentos para essa condição são:
+            <ul>
+              <li>- Psicoterapia: Esse é o principal método de tratamento para o TPB. A terapia cognitivo-comportamental, a terapia dialética comportamental e a terapia focada na mentalização são algumas das abordagens comumente usadas.</li>
+              <li>- Medicamentos: Não existem medicamentos específicos para o TPB, porém alguns medicamentos podem amenizar os sintomas, geralmente são usados os estabilizadores de humor e antidepressivos para controlar os sentimentos de tristeza e ansiedade.</li>
+              <li>- Terapia de grupo: Em alguns casos pode ser útil, a pessoa pode aprender habilidades sociais e ganhar apoio de outras pessoas que passam por experiências semelhantes.</li>
+            </ul>
+            Sempre é importante buscar ajuda de um profissional de saúde mental caso sejam apresentados sintomas dessa ou de outra condição mental séria, os profissionais podem oferecer diagnósticos e tratamentos adequados.
+          </div>
         </div>
 
         <div className="condicaoMental tdah" style={{maxHeight: alturaTDAH}}>
           <h2 onClick={changeHeightTDAH}>TDAH</h2>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illum in minus? Nobis quibusdam repellat totam nihil dolorem doloremque dignissimos, odio cum molestiae provident id quo dicta architecto. Nemo, voluptatibus.</div>
+          <div>
+            O Transtorno de Déficit de Atenção com Hiperatividade (TDAH) é uma condição do neurodesenvolvimento que afeta a formação do cérebro e do sistema nervoso central. O TDAH é caracterizado por sintomas que envolvem desatenção, hiperatividade e impulsividade em nível elevado, com prejuízos em diferentes aspectos da vida, como as relações sociais e os desempenhos cognitivo, escolar e profissional. Alguns dos principais sintomas de TDAH são:
+            <ul>
+              <li>- Desatentação: Dificuldades em manter a concentração e distração fácil.</li>
+              <li>- Hiperatividade: Inquietação e falar excessivamente.</li>
+              <li>- Impulsividade: Agir descontroladamente de maneira impulssiva.</li>
+              <li>- Desconcentração: A pessoa não consegue focar em uma única tarefa ou ficar parado por um grande tempo.</li>
+            </ul>
+            É importante buscar um profissional de saúde mental caso você apresente algum desses sintomas para poder ter certeza de seu diagnóstico e buscar o tratamento ideal. Aqui estão alguns dos tratamentos mais comuns:
+            <ul>
+              <li>- Medicação: São usadas medicações com estimulantes para controlar os sintomas.</li>
+              <li>- Psicoterapia comportamental: Ajuda a lidar com os sintomas e melhorar o comportamento.</li>
+            </ul>
+            É importante lembrar que nem todas as pessoas sentem os mesmos sintomas e é necessário a consulta a um profissional de saúde mental para ter certeza do diagnóstico e iniciar um tratamento.
+          </div>
+        </div>
+
+        <hr />
+
+        <div className="condicoesMentaisEnd">
+          <h2>Lembre-se que essas condições mentais podem variar de sintomas e tratamentos de pessoa para pessoa e essas explicações são apenas explicações gerais sobre cada condição, para um diagnóstico correto e um bom tratamento é necessário a consulta com um psicólogo ou psiquiatra.</h2>
+          <button onClick={returnToInit}>Página inicial</button>
         </div>
       </div>
     </div>
