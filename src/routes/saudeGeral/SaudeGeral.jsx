@@ -35,36 +35,36 @@ const SaudeGeral = () => {
           <p>
             É fundamental manter uma alimentação saudável para ter uma boa saúde física, sendo também algo de extrema importância para a saúde mental, portanto, é importante saber sobre a conexão entre a dieta saudável e a nossa mente.
           </p>
-          <p>
+          <div>
             <b>Nutrientes essenciais:</b>
             <p>
               Os nutrientes essenciais, como vitaminas, minerais, proteínas e ácidos graxos ômega-3, são vitais para o funcionamento adequado do cérebro. A falta desses nutrientes pode levar a problemas de saúde mental, como depressão e ansiedade. Por exemplo, a vitamina B12, encontrada em alimentos como peixe e ovos, é crucial para a saúde do sistema nervoso e a produção de neurotransmissores que regulam o humor. Busque sempre uma dieta que inclua esses nutrientes.
             </p>
-          </p>
-          <p>
+          </div>
+          <div>
             <b>Alimentos Integrais e Saúde Mental:</b>
             <p>
               Alimentos integrais, como frutas, vegetais, grãos integrais e legumes, são ricos em fibras e antioxidantes. Eles ajudam a regular o açúcar no sangue e a inflamação, ambos ligados à saúde mental. Estudos mostram que dietas ricas em alimentos integrais podem reduzir o risco de depressão e ansiedade.
             </p>
-          </p>
-          <p>
+          </div>
+          <div>
             <b>Açúcar e Saúde Mental:</b>
             <p>
               O consumo excessivo de açúcar tem sido associado a uma série de problemas de saúde, incluindo obesidade e doenças cardíacas. Além disso, estudos sugerem que dietas ricas em açúcar podem aumentar o risco de problemas de saúde mental. Reduzir o consumo de açúcar pode melhorar o humor e a energia.
             </p>
-          </p>
-          <p>
+          </div>
+          <div>
             <b>Hidratação:</b>
             <p>
               A hidratação adequada é essencial para a saúde geral, incluindo a saúde mental. A desidratação pode afetar a concentração, o humor e a energia.
             </p>
-          </p>
-          <p>
+          </div>
+          <div>
             <b>Conclusão:</b>
             <p>
               A alimentação saudável é uma parte crucial do cuidado com a saúde mental. Uma dieta equilibrada e nutritiva pode ajudar a melhorar o humor, aumentar a energia e reduzir o risco de problemas de saúde mental. Lembre-se, é sempre importante procurar aconselhamento de um profissional de saúde ao fazer mudanças significativas na dieta.
             </p>
-          </p>
+          </div>
         </div>
 
         <div className="exercicios">
@@ -72,24 +72,24 @@ const SaudeGeral = () => {
           <p>
             A prática de exercícios traz diversas vantagens para a saúde física e mental, além de causar mudanças físicas que contibuem para o aumento da autoestima e autoeficácia. Por meio de exercícios, também vem mudanças biológicas, como a liberação de neurotransmissores que estão associados ao funcionamento do sistema nervoso central e ao cérebro.
           </p>
-          <p>
+          <div>
             <b>Redução de sintomas de transtornos mentais:</b>
             <p>
               Evidências científicas indicam que a prática de exercícios previne sintomas de transtornos como depressão, ansiedade e transtorno bipolar. Exercícios aeróbicos e de resistencia são muito eficazes para isso quando são praticados por cerca de 90 minutos semanais.
             </p>
-          </p>
-          <p>
+          </div>
+          <div>
             <b>Recomendação da OMS:</b>
             <p>
               A Organização Mundial da Saúde (OMS) recomenda de 150 a 300 minutos de atividade aeróbica moderada a vigorosa por semana para adultos, e uma média de 60 minutos diários para crianças e adolescentes. Até mesmo pessoas sedentárias que pode não aguentar essa média, devem começar com as atividades possíveis para sair da condição de sedentário e ter uma boa saúde física.
             </p>
-          </p>
-          <p>
+          </div>
+          <div>
             <b>Tratamento de transtornos mentais com exercícios:</b>
             <p>
               Os exercícios em diversos casos na psicoterapia é usado como parte do tratamento de diversos transtornos mentais pela auta eficácia na diminuição de seus sintomas, isso prova que os exercícios tem resultado muito significativo na saúde mental.
             </p>
-          </p>
+          </div>
         </div>
         <div className='outrosConselhos'>
           <hr />
