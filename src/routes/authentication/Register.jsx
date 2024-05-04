@@ -15,9 +15,9 @@ const Register = () => {
     const returnToInit = () => {
       navigate("/");
     };
-    
+
     const goToLogin = () => {
-        navigate("/");
+        navigate("/login");
       };
 
     const isValidEmail = (email) => {
@@ -36,17 +36,12 @@ const Register = () => {
         alert('Você foi registrado com sucesso, agora faça o login em sua conta.')
         goToLogin();
       } catch (error) {
-        if (error.code === 'auth/email-already-in-use') {
-          // O e-mail já está em uso
-         alert('Este e-mail já está em uso.');
-        } else {
           if (password.length < 6) {
             console.log('A senha deve ter pelo menos 6 caracteres.');
             return;
           } else {
             console.log('Aconteceu algum problema ao criar a sua conta, caso você não consiga resolver, entre em contato com o suporte do Mind')
           }
-        }
       }
       };
 

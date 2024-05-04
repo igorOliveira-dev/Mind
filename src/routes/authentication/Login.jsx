@@ -23,9 +23,7 @@ const Login = () => {
         alert('Seu login foi feito com sucesso!')
         returnToInit();
       } catch (error) {
-        if (error.code === 'auth/wrong-password') {
-          alert('Seu e-mail e/ou senha está incorreto. Caso o problema não seja resolvido, entre em contato com o suporte do Mind')
-        }
+        alert('Seu e-mail e/ou senha está incorreto. Caso o problema não seja resolvido, entre em contato com o suporte do Mind')
       }
       };
 
