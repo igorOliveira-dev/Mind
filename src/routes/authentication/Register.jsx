@@ -12,6 +12,10 @@ const Register = () => {
   const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
+    const returnToInit = () => {
+      navigate("/");
+    };
+    
     const goToLogin = () => {
         navigate("/");
       };
