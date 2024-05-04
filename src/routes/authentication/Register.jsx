@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { auth } from '../firebase';
-
 import { createUserWithEmailAndPassword, updateProfile, getAuth } from "firebase/auth";
 
 import './login.css';
@@ -10,44 +8,40 @@ import './login.css';
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [user, setUser] = useState('');
+  const [username, setUsername] = useState('');
 
-    const navigate = useNavigate();
-    const returnToInit = () => {
-      navigate("/");
-    };
+  const navigate = useNavigate();
+  const returnToInit = () => {
+    navigate("/");
+  };
 
-    const goToLogin = () => {
-        navigate("/login");
-      };
+  const isValidEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
 
-    const isValidEmail = (email) => {
-      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      return regex.test(email);
-    };
-
-    const handleRegister = async (event) => {
-      event.preventDefault();
-      if (!isValidEmail(email)) {
-        alert('Por favor, insira um e-mail válido.');
-        return;
-      }
-      try {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-        await updateProfile(user, { displayName: username });
-        alert(user);
-        alert('Você foi registrado com sucesso, agora faça o login em sua conta.');
-        goToLogin();
-      } catch (error) {
-          if (password.length < 6) {
-            alert('A senha deve ter pelo menos 6 caracteres.');
-            return;
-          } else {
-            alert('Aconteceu algum problema ao criar a sua conta, caso você não consiga resolver, entre em contato com o suporte do Mind')
-          }
+  const handleRegister = async (event) => {
+    event.preventDefault();
+    const auth = getAuth();
+    if (!isValidEmail(email)) {
+      alert('Por favor, insira um e-mail válido.');
+      return;
+    }
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      await updateProfile(auth.currentUser, { displayName: username });
+      alert('Você foi registrado e logado com sucesso.');
+      returnToInit();
+    } catch (error) {
+        if (password.length < 6) {
+          alert('A senha deve ter pelo menos 6 caracteres.');
+          return;
+        } else {
+          alert('Aconteceu algum problema ao criar a sua conta, caso você não consiga resolver, entre em contato com o suporte do Mind')
+          return;
         }
-      };
+      }
+    };
 
   return (
     <div className='loginScreen'>
@@ -58,7 +52,7 @@ const Register = () => {
         <form onSubmit={handleRegister}>
         <div className="loginInputBox">
             <label htmlFor="username">Nome de usuário:</label>
-            <input type="text" name='username' required onChange={e => setUser(e.target.value)} />
+            <input type="text" name='username' required onChange={e => setUsername(e.target.value)} />
           </div>
           <div className="loginInputBox">
             <label htmlFor="email">E-mail:</label>
