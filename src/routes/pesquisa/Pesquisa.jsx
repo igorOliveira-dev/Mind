@@ -4,7 +4,7 @@ import { useState } from 'react'
 import './pesquisa.css'
 
 import Header from '../../elements/Header'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Pesquisa = () => {
   const [respostas, setRespostas] = useState({});
@@ -354,7 +354,12 @@ const Pesquisa = () => {
     
       let condicoesStr = condicoes.join(", ");
     
-      setTxtConclusao(txtConclusao => txtConclusao + " Você tem indícios das seguintes condições mentais: " + condicoesStr + ".");
+      setTxtConclusao(txtConclusao => (
+        <>
+          {txtConclusao} Você tem indícios das seguintes condições mentais: {condicoesStr}.
+          Você pode ver sobre essa(s) condição(s) em: <Link className='linkToCondicoesMentais' to="/condicoes-mentais">Condições Mentais</Link>
+        </>
+      ));
     }
   }
 

@@ -56,6 +56,7 @@ const Header = () => {
           <Link to="/">Link 6</Link>
           <Link to="/">Link 7</Link>
           <Link to="/">Link 8</Link>
+          <Link to="/login">Entrar</Link>
         </div>
     </div>
   )
