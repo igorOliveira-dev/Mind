@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
 
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile, getAuth } from "firebase/auth";
 
 import './login.css';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [user, setUser] = useState('');
 
     const navigate = useNavigate();
     const returnToInit = () => {
@@ -32,8 +33,11 @@ const Register = () => {
         return;
       }
       try {
-        await createUserWithEmailAndPassword(auth, email, password);
-        alert('Você foi registrado com sucesso, agora faça o login em sua conta.')
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        await updateProfile(user, { displayName: username });
+        alert(user);
+        alert('Você foi registrado com sucesso, agora faça o login em sua conta.');
         goToLogin();
       } catch (error) {
           if (password.length < 6) {
@@ -52,6 +56,10 @@ const Register = () => {
         <h1>Registro</h1>
         <hr />
         <form onSubmit={handleRegister}>
+        <div className="loginInputBox">
+            <label htmlFor="username">Nome de usuário:</label>
+            <input type="text" name='username' required onChange={e => setUser(e.target.value)} />
+          </div>
           <div className="loginInputBox">
             <label htmlFor="email">E-mail:</label>
             <input type="email" name='email' required onChange={e => setEmail(e.target.value)} />

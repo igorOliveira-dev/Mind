@@ -26,7 +26,7 @@
 }
 
 .loginContainer {
-    height: 400px;
+    height: auto;
     width: 350px;
     border: 2px solid #cc39a4;
     border-radius: 40px;

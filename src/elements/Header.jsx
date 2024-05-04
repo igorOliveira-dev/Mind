@@ -51,6 +51,7 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
+      alert('Conta desconectada com sucesso');
       await signOut(auth);
     } catch (error) {
       console.error('Erro ao fazer logout', error);
@@ -75,10 +76,8 @@ const Header = () => {
           <Link to="/condicoes-mentais">Condições mentais</Link>
           <Link to="/">Link 5</Link>
           <Link to="/">Link 6</Link>
-          <Link to="/">Link 7</Link>
-          <Link to="/">Link 8</Link>
           {user ? (
-          <button onClick={handleLogout} className='logoutBtn'>Logout</button>
+          <button onClick={handleLogout} className='logoutBtn'>Sair</button>
           ) : (
           <Link to="/login">Entrar</Link>
           )}
