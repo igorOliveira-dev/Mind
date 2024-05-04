@@ -25,7 +25,7 @@ const Login = () => {
       } catch (error) {
         alert('Seu e-mail e/ou senha está incorreto. Caso o problema não seja resolvido, entre em contato com o suporte do Mind')
       }
-      };
+    };
 
   return (
     <div className='loginScreen'>

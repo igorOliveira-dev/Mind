@@ -28,7 +28,7 @@ const Register = () => {
     const handleRegister = async (event) => {
       event.preventDefault();
       if (!isValidEmail(email)) {
-        console.log('Por favor, insira um e-mail válido.');
+        alert('Por favor, insira um e-mail válido.');
         return;
       }
       try {
@@ -37,10 +37,10 @@ const Register = () => {
         goToLogin();
       } catch (error) {
           if (password.length < 6) {
-            console.log('A senha deve ter pelo menos 6 caracteres.');
+            alert('A senha deve ter pelo menos 6 caracteres.');
             return;
           } else {
-            console.log('Aconteceu algum problema ao criar a sua conta, caso você não consiga resolver, entre em contato com o suporte do Mind')
+            alert('Aconteceu algum problema ao criar a sua conta, caso você não consiga resolver, entre em contato com o suporte do Mind')
           }
       }
       };
