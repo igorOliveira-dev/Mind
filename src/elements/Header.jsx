@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom';
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 import logo from '/cerebro.png'
 
@@ -36,6 +37,26 @@ const Header = () => {
     };
   }, [isOpen]);
 
+  // configurações de logout
+  const [user, setUser] = useState(null);
+  const auth = getAuth();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, currentUser => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, [auth]);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error('Erro ao fazer logout', error);
+    }
+  };
+
   return (
     <div className='header'>
         <div className="leftHeader" onClick={logoClick}>
@@ -57,6 +78,11 @@ const Header = () => {
           <Link to="/">Link 7</Link>
           <Link to="/">Link 8</Link>
           <Link to="/login">Entrar</Link>
+          {user ? (
+          <button onClick={handleLogout}>Logout</button>
+          ) : (
+          <Link to="/login">Entrar</Link>
+          )}
         </div>
     </div>
   )
