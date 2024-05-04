@@ -77,9 +77,8 @@ const Header = () => {
           <Link to="/">Link 6</Link>
           <Link to="/">Link 7</Link>
           <Link to="/">Link 8</Link>
-          <Link to="/login">Entrar</Link>
           {user ? (
-          <button onClick={handleLogout}>Logout</button>
+          <button onClick={handleLogout} className='logoutBtn'>Logout</button>
           ) : (
           <Link to="/login">Entrar</Link>
           )}

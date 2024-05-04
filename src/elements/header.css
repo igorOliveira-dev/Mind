@@ -81,3 +81,11 @@
         transform: translateX(0);
     }
 }
+
+.logoutBtn {
+    color: #fdfdfd;
+    border: none;
+    background-color: transparent;
+    padding: 15px;
+    font-size: 16px;
+}
