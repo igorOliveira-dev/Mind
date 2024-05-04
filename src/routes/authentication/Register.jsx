@@ -1,15 +1,45 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { auth } from '../firebase';
+
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 import './login.css';
 
 const Register = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
     const returnToInit = () => {
         navigate("/");
       };
+
+    const isValidEmail = (email) => {
+      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      return regex.test(email);
+    };
+
+    const handleRegister = async (event) => {
+      event.preventDefault();
+      if (!isValidEmail(email)) {
+        console.log('Por favor, insira um e-mail válido.');
+        return;
+      }
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        
+      } catch (error) {
+        if (error.code === 'auth/email-already-in-use') {
+          // O e-mail já está em uso
+          console.log('Este e-mail já está em uso.');
+        } else {
+          // Outro erro ocorreu
+          console.log(error.message);
+        }
+      }
+    };
 
   return (
     <div className='loginScreen'>
@@ -17,16 +47,16 @@ const Register = () => {
       <div className="loginContainer">
         <h1>Registro</h1>
         <hr />
-        <form action="">
+        <form onSubmit={handleRegister}>
           <div className="loginInputBox">
             <label htmlFor="email">E-mail:</label>
-            <input type="email" name='email' required />
+            <input type="email" name='email' required onChange={e => setEmail(e.target.value)} />
           </div>
           <div className="loginInputBox">
             <label htmlFor="password">Senha:</label>
-            <input type="password" name='password' required />
+            <input type="password" name='password' required onChange={e => setPassword(e.target.value)} />
           </div>
-          <button className='submitLogin'>Entrar</button>
+          <input type='submit' className='submitLogin' value="Criar conta" />
           <p>Já tem uma conta? <Link className='linkCriarConta' to="/login">Entrar agora</Link></p>
         </form>
       </div>

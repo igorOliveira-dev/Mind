@@ -1,0 +1,26 @@
+.cookieBanner {
+    position: fixed;
+    padding: 20px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #fdfdfd;
+    color: #fdfdfd;
+    max-width: 1190px;
+}
+
+.btnAceptCookies {
+    margin-top: 10px;
+    padding: 7px;
+    border: 1px solid #fdfdfd;
+    background-color: transparent;
+    color: #fdfdfd;
+    font-weight: bolder;
+}

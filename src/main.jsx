@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import CookieBanner from './CookieBanner';
 
 import MainRoute from "./routes/mainRoute/MainRoute";
 import SeEntenda from "./routes/seEntenda/SeEntenda";
@@ -48,5 +49,6 @@ const router = createHashRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <CookieBanner />
   </React.StrictMode>
 );
