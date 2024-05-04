@@ -20,20 +20,21 @@ const Login = () => {
       event.preventDefault();
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        // Redirecionar para a página de chat após o login bem-sucedido
+        alert('Seu login foi feito com sucesso!')
+        returnToInit;
       } catch (error) {
         if (error.code === 'auth/wrong-password') {
           
           // A senha está incorreta
-          console.log('A senha está incorreta.');
+          alert('A senha está incorreta.');
         } else if (error.code === 'auth/user-not-found') {
           
           // Não existe uma conta com este e-mail
-          console.log('Não existe uma conta com este e-mail.');
+          alert('Não existe uma conta com este e-mail.');
         } else {
 
           // Outro erro ocorreu
-          console.log(error.message);
+          alert(error.message);
         }
       }
       };

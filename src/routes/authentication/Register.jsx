@@ -29,14 +29,15 @@ const Register = () => {
       }
       try {
         await createUserWithEmailAndPassword(auth, email, password);
-        
+        alert('Você foi registrado com sucesso, agora faça o login em sua conta.')
+        returnToInit;
       } catch (error) {
         if (error.code === 'auth/email-already-in-use') {
           // O e-mail já está em uso
-          console.log('Este e-mail já está em uso.');
+         alert('Este e-mail já está em uso.');
         } else {
           // Outro erro ocorreu
-          console.log(error.message);
+          alert(error.message);
         }
       }
     };
