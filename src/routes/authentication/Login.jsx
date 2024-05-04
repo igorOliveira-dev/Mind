@@ -21,20 +21,10 @@ const Login = () => {
       try {
         await signInWithEmailAndPassword(auth, email, password);
         alert('Seu login foi feito com sucesso!')
-        returnToInit;
+        returnToInit();
       } catch (error) {
         if (error.code === 'auth/wrong-password') {
-          
-          // A senha está incorreta
-          alert('A senha está incorreta.');
-        } else if (error.code === 'auth/user-not-found') {
-          
-          // Não existe uma conta com este e-mail
-          alert('Não existe uma conta com este e-mail.');
-        } else {
-
-          // Outro erro ocorreu
-          alert(error.message);
+          alert('Seu e-mail e/ou senha está incorreto. Caso o problema não seja resolvido, entre em contato com o suporte do Mind')
         }
       }
       };
