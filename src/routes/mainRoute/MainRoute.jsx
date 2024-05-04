@@ -1,25 +1,27 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import Header from '../../elements/Header'
-
 import './mainRoute.css'
 import Footer from '../../elements/Footer'
 
 const MainRoute = () => {
-
   const [username, setUsername] = useState('');
 
   useEffect(() => {
     const auth = getAuth();
-    const user = auth.currentUser;
 
-    if (user) {
-      setUsername(user.displayName);
-    } else {
-      alert("você está deslogado")
-    }
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUsername(user.displayName);
+      } else {
+        alert("você está deslogado")
+      }
+    });
+
+    // Limpar a inscrição quando o componente for desmontado
+    return () => unsubscribe();
   }, []);
 
   useEffect(() => {
@@ -27,7 +29,6 @@ const MainRoute = () => {
       alert("você está logado, " + username);
     }
   }, [username]);
-
 
   //scroll para o topo ao carregar a pagina
   useEffect(() => {
@@ -47,8 +48,6 @@ const MainRoute = () => {
   const goToCondicoesMentais = () => {
     navigate("/condicoes-mentais")
   }
-
-
 
   return (
     <div>
