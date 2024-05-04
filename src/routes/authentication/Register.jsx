@@ -42,7 +42,7 @@ const Register = () => {
           } else {
             alert('Aconteceu algum problema ao criar a sua conta, caso você não consiga resolver, entre em contato com o suporte do Mind')
           }
-      }
+        }
       };
 
   return (
