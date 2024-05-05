@@ -9,6 +9,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
+  const [loading, setLoading] = useState(false); // Novo estado para rastrear o carregamento
 
   const navigate = useNavigate();
   const returnToInit = () => {
@@ -22,26 +23,27 @@ const Register = () => {
 
   const handleRegister = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const auth = getAuth();
     if (!isValidEmail(email)) {
       alert('Por favor, insira um e-mail válido.');
+      setLoading(false);
       return;
     }
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(auth.currentUser, { displayName: username });
-      alert('Você foi registrado e logado com sucesso.');
       returnToInit();
     } catch (error) {
         if (password.length < 6) {
           alert('A senha deve ter pelo menos 6 caracteres.');
-          return;
         } else {
           alert('Aconteceu algum problema ao criar a sua conta, caso você não consiga resolver, entre em contato com o suporte do Mind')
-          return;
         }
-      }
-    };
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className='loginScreen'>
@@ -62,7 +64,7 @@ const Register = () => {
             <label htmlFor="password">Senha:</label>
             <input type="password" name='password' required onChange={e => setPassword(e.target.value)} />
           </div>
-          <input type='submit' className='submitLogin' value="Criar conta" />
+          <input type='submit' className='submitLogin' value={loading ? "Carregando..." : "Criar conta"} />
           <p>Já tem uma conta? <Link className='linkCriarConta' to="/login">Entrar agora</Link></p>
         </form>
       </div>

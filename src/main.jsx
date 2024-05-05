@@ -14,6 +14,7 @@ import SaudeGeral from "./routes/saudeGeral/SaudeGeral";
 import CondicoesMentais from "./routes/condicoesMentais/CondicoesMentais";
 import Login from "./routes/authentication/Login";
 import Register from "./routes/authentication/Register";
+import MyAccount from "./routes/myAccount/MyAccount";
 
 const router = createHashRouter([
   {
@@ -43,6 +44,10 @@ const router = createHashRouter([
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/my-account",
+    element: <MyAccount />
   },
 ]);
 

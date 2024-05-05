@@ -70,16 +70,19 @@ const Header = () => {
             <div className='barHamburger'></div>
         </div>
         <div className="menu" style={{display: isOpen ? 'flex' : 'none'}}>
-          <Link to="/">Início</Link>
-          <Link to="/se-entenda">Se entenda</Link>
-          <Link to="/saude-geral">Saúde geral</Link>
-          <Link to="/condicoes-mentais">Condições mentais</Link>
-          <Link to="/">Link 5</Link>
-          <Link to="/">Link 6</Link>
+          <Link className='menuLink' to="/">Início</Link>
+          <Link className='menuLink' to="/se-entenda">Se entenda</Link>
+          <Link className='menuLink' to="/saude-geral">Saúde geral</Link>
+          <Link className='menuLink' to="/condicoes-mentais">Condições mentais</Link>
+          <Link className='menuLink' to="/">Link 5</Link>
+          <Link className='menuLink' to="/">Link 6</Link>
           {user ? (
-          <button onClick={handleLogout} className='logoutBtn'>Sair</button>
+          <>
+            <Link className='linkToMyAccount' to="my-account">Minha conta</Link>
+            <button onClick={handleLogout} className='logoutBtn'>Sair</button>
+          </>
           ) : (
-          <Link to="/login">Entrar</Link>
+          <Link to="/login" className='menuLink'>Entrar</Link>
           )}
         </div>
     </div>

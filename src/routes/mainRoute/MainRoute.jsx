@@ -15,20 +15,12 @@ const MainRoute = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUsername(user.displayName);
-      } else {
-        alert("você está deslogado")
       }
     });
 
     // Limpar a inscrição quando o componente for desmontado
     return () => unsubscribe();
   }, []);
-
-  useEffect(() => {
-    if (username) {
-      alert("você está logado, " + username);
-    }
-  }, [username]);
 
   //scroll para o topo ao carregar a pagina
   useEffect(() => {
