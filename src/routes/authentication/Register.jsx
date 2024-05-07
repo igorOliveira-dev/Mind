@@ -25,6 +25,19 @@ const Register = () => {
     event.preventDefault();
     setLoading(true);
     const auth = getAuth();
+
+    if (username.length > 15) {
+      alert('O nome de usuário não pode ter mais de 15 letras');
+      setLoading(false);
+      return;
+    }
+
+    if (username.includes(' ')) {
+      alert('O nome de usuário não pode conter espaços.');
+      setLoading(false);
+      return;
+    }
+
     if (!isValidEmail(email)) {
       alert('Por favor, insira um e-mail válido.');
       setLoading(false);

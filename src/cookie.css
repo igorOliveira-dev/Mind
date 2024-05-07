@@ -16,11 +16,18 @@
     max-width: 1190px;
 }
 
-.btnAceptCookies {
+.btnCookies {
     margin-top: 10px;
     padding: 7px;
+    margin-inline: 10px;
     border: 1px solid #fdfdfd;
     background-color: transparent;
     color: #fdfdfd;
     font-weight: bolder;
+}
+
+@media (max-width: 450px) {
+    .cookieBanner {
+        font-size: 14px;
+    }
 }

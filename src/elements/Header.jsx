@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   const hamburgerClick = (event) => {
-    event.stopPropagation(); // Prevent the event from bubbling up to the body
+    event.stopPropagation();
     setIsOpen(!isOpen);
   };
 
@@ -50,6 +50,9 @@ const Header = () => {
   }, [auth]);
 
   const handleLogout = async () => {
+    if (!confirm('Você tem certeza que deseja desconectar a sua conta?')) {
+      return;
+    }
     try {
       alert('Conta desconectada com sucesso');
       await signOut(auth);
