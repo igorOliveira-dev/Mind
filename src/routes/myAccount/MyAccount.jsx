@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 import profileImage from '/user-profile-icon.png'
 
-import { FaPencilAlt } from 'react-icons/fa';
-
 import './myAccount.css'
 
 const MyAccount = () => {
@@ -71,6 +69,11 @@ const MyAccount = () => {
     }
   };
 
+  const [infoOpen, setInfoOpen] = useState(false);
+  const changeIsOpenState = () => {
+    setInfoOpen(!infoOpen)
+  }
+
   return (
     <div className='myAccountContainer'>
       <button onClick={returnToInit} className='btnVoltarMyAccount'>{"<"}</button>
@@ -79,8 +82,28 @@ const MyAccount = () => {
         <img src={profileImage} alt="imagem de perfil" className='imgProfileMyAccount' />
         <h2 className='usernameMyAccount'>Olá, {username}</h2>
         <h3 className='emailMyAccount'>{email}</h3>
-        <Link to="/" className='profileInformationLink'>Informações sobre perfis</Link>
+        <button className='profileInformationLink' onClick={changeIsOpenState}>Informações sobre perfis</button>
         <button onClick={handleLogout} className='logoutBtnMyAccount'>Sair</button>
+      </div>
+      <div className="profileInformationBox" style={{display: infoOpen ? 'block' : 'none'}}>
+        <button className='closeProfileInfo' onClick={changeIsOpenState}>{"<"}</button>
+        <div>
+          <p>Prezado usuário,</p>
+          
+          <p>Gostaríamos de fornecer algumas informações importantes sobre a sessão de perfil em nosso site.</p>
+          
+          <p>Os perfis em nosso site são projetados para melhorar a interação entre os usuários em certas sessões. Eles desempenham um papel crucial na personalização da sua experiência e na facilitação de uma comunicação eficaz entre os membros da nossa comunidade.</p>
+          
+          <p>No momento, gostaríamos de informar que a foto do perfil é apenas demonstrativa e não pode ser alterada pelos usuários. Estamos cientes de que a personalização da foto do perfil é uma característica importante e estamos trabalhando para disponibilizá-la no futuro.</p>
+          
+          <p>Além disso, se você deseja alterar seu nome de usuário ou senha, atualmente essas opções não estão disponíveis diretamente na aplicação. No entanto, nossa equipe de suporte está sempre pronta para ajudar. Você pode entrar em contato com o suporte do Mind para solicitar essas alterações.</p>
+          
+          <p>Agradecemos a sua compreensão e paciência enquanto trabalhamos para melhorar a funcionalidade do nosso site. Se você tiver mais perguntas ou precisar de assistência adicional, não hesite em entrar em contato conosco.</p>
+          
+          <p>Atenciosamente, Equipe do Mind.</p>
+          
+          <Link to="/suporte" className='linkToSupportMyAccount'>Clique para obter suporte.</Link>
+        </div>
       </div>
     </div>
   )

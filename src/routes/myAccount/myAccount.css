@@ -35,12 +35,12 @@
 }
 
 .btnVoltarMyAccount:hover {
-    background-color: #ffffff40;
+    scale: 1.1;
 }
 
-h1 {
-    color: #cc39a4;
-    font-size: 60px;
+.myAccountBox > h1 {
+    color: #cb69b1;
+    font-size: 55px;
     margin-bottom: 20px;
 }
 
@@ -70,15 +70,21 @@ h1 {
 .profileInformationLink {
     color: #C77AB2;
     margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    text-align: start;
+    padding: 0;
+    font-size: 15px;
+    text-decoration: underline;
 }
 
 .logoutBtnMyAccount {
     background-color: transparent;
     padding: 7px;
     width: 100px;
-    color: red;
+    color: rgb(255, 34, 34);
     border-radius: 7;
-    border: 3px solid red;
+    border: 2px solid rgb(255, 34, 34);
     font-weight: bolder;
     transition: .4s;
 }
@@ -102,4 +108,39 @@ h1 {
     .myAccountBox {
         scale: .9;
     }
+}
+
+.profileInformationBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    color: #fdfdfd;
+    border: 1px solid #fdfdfd56;
+    width: 90vw;
+    max-width: 800px;
+}
+
+.closeProfileInfo {
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
+    color: #fdfdfd;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.profileInformationBox > div {
+    margin-inline: 20px;
+    margin-bottom: 20px;
+}
+
+.profileInformationBox > div > p {
+    margin-bottom: 10px;
+}
+
+.linkToSupportMyAccount {
+    color: rgb(184, 184, 255);
 }
