@@ -102,7 +102,7 @@ const MyAccount = () => {
           
           <p>Atenciosamente, Equipe do Mind.</p>
           
-          <Link to="/suporte" className='linkToSupportMyAccount'>Clique para obter suporte.</Link>
+          <Link to="/support" className='linkToSupportMyAccount'>Clique para obter suporte.</Link>
         </div>
       </div>
     </div>

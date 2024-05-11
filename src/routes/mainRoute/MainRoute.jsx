@@ -41,6 +41,14 @@ const MainRoute = () => {
     navigate("/condicoes-mentais")
   }
 
+  const goToComunity = () => {
+    navigate("/comunity")
+  }
+
+  const goToSupport = () => {
+    navigate("/support")
+  }
+
   return (
     <div>
       <Header />
@@ -68,9 +76,14 @@ const MainRoute = () => {
           <h2>Condições Mentais</h2>
           <p>Aqui você vai entender sobre algumas condições mentais e como elas funcionam, assim é possível identificar caso você tenha alguma dessas condições.</p>
         </button>
-        <button className="btn4">btn</button>
-        <button className="btn5">btn</button>
-        <button className="btn6">btn</button>
+        <button className="btn4" onClick={goToComunity}>
+          <h2>Comunidade</h2>
+          <p>Aqui você pode interagir com outros usuários compartilhando seus sentimentos e podendo encontrar pessoas que passam por situações parecidas com a sua.</p>
+        </button>
+        <button className="btn5" onClick={goToSupport}>
+          <h2>Suporte</h2>
+          <p>Na página de suporte você pode entrar em contato com a equipe do Mind para poder receber qualquer tipo de suporte sobre este site.</p>
+        </button>
       </div>
 
       <Footer />

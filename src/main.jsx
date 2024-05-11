@@ -1,12 +1,10 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import {
-  createHashRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import CookieBanner from './CookieBanner';
+import CookieBanner from './cookies/CookieBanner';
 
+import AuthVerification from "./AuthVerification";
 import MainRoute from "./routes/mainRoute/MainRoute";
 import SeEntenda from "./routes/seEntenda/SeEntenda";
 import Pesquisa from "./routes/pesquisa/Pesquisa";
@@ -15,6 +13,8 @@ import CondicoesMentais from "./routes/condicoesMentais/CondicoesMentais";
 import Login from "./routes/authentication/Login";
 import Register from "./routes/authentication/Register";
 import MyAccount from "./routes/myAccount/MyAccount";
+import Comunity from "./routes/comunity/Comunity";
+import Support from "./routes/support/Support";
 
 const router = createHashRouter([
   {
@@ -43,11 +43,19 @@ const router = createHashRouter([
   },
   {
     path: "/register",
-    element: <Register />
+    element: <Register />,
   },
   {
     path: "/my-account",
-    element: <MyAccount />
+    element: <MyAccount />,
+  },
+  {
+    path: "/comunity",
+    element: <AuthVerification><Comunity /></AuthVerification>,
+  },
+  {
+    path: "/support",
+    element: <Support />,
   },
 ]);
 

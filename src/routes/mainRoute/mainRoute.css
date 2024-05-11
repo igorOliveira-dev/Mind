@@ -79,8 +79,6 @@
   grid-template-areas:
   "btn1 btn2 btn3"
   "btn4 btn5 btn6";
-  justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
@@ -140,7 +138,7 @@
     grid-template-areas: 
     "btn1 btn2"
     "btn3 btn4"
-    "btn5 btn6";
+    "btn5";
   }
 }
 
@@ -165,8 +163,7 @@
     "btn2"
     "btn3"
     "btn4"
-    "btn5"
-    "btn6";
+    "btn5";
     scale: 1;
   }
   .paginas > button {

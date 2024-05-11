@@ -144,3 +144,9 @@
 .linkToSupportMyAccount {
     color: rgb(184, 184, 255);
 }
+
+@media (max-width: 600px) {
+    .profileInformationBox {
+        font-size: 14px;
+    }
+}

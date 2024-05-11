@@ -1,0 +1,15 @@
+.supportContent {
+    margin-top: 100px;
+}
+
+.leftBoxSupport > form {
+    display: flex;
+    flex-direction: column;
+    color: #fdfdfd;
+}
+
+.leftBoxSupport > form > input, .leftBoxSupport > form > textarea {
+    background-color: transparent;
+    border: 2px solid #C77AB2;
+    width: 500px;
+}
