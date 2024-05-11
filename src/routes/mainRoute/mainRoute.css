@@ -81,11 +81,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+<<<<<<< HEAD
   align-items: center;
   max-width: 900px;
   margin: 30px;
   margin-block: 45px;
   box-sizing: border-box;
+=======
+  gap: 10px;
+  grid-template-areas:
+  "btn1 btn2 btn3"
+  "btn4 btn5";
+  gap: 20px;
+>>>>>>> fd4fff7f762d7eb85fd12eb44f62d5e945e41fe9
 }
 
 .paginas > button {
@@ -114,7 +122,31 @@
 }
 
 .paginas > button:hover {
+<<<<<<< HEAD
   scale: 1.03;
+=======
+  scale: 1.1;
+}
+
+.btn1 {
+  grid-area: btn1;
+}
+
+.btn2 {
+  grid-area: btn2;
+}
+
+.btn3 {
+  grid-area: btn3;
+}
+
+.btn4 {
+  grid-area: btn4;
+}
+
+.btn5 {
+  grid-area: btn5;
+>>>>>>> fd4fff7f762d7eb85fd12eb44f62d5e945e41fe9
 }
 
 @media (max-width: 850px) {
