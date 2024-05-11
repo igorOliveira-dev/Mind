@@ -1,3 +1,9 @@
+.mainInitContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mainInit {
     position: relative;
     height: calc(100vh - (100px));
@@ -70,16 +76,16 @@
 }
 
 .paginas {
-  height: calc(100vh - (150px));
+  height: 60vh;
   position: relative;
-  display: grid;
-  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  grid-template-areas:
-  "btn1 btn2 btn3"
-  "btn4 btn5 btn6";
-  gap: 20px;
+  align-items: center;
+  max-width: 900px;
+  margin: 30px;
+  margin-block: 45px;
+  box-sizing: border-box;
 }
 
 .paginas > button {
@@ -95,6 +101,8 @@
   align-items: start;
   text-align: left;
   box-shadow: 0 0 7px rgba(255, 255, 255, .5);
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 .paginas > button > h2 {
@@ -106,73 +114,30 @@
 }
 
 .paginas > button:hover {
-  scale: 1.1;
-}
-
-.btn1 {
-  grid-area: btn1;
-}
-
-.btn2 {
-  grid-area: btn2;
-}
-
-.btn3 {
-  grid-area: btn3;
-}
-
-.btn4 {
-  grid-area: btn4;
-}
-
-.btn5 {
-  grid-area: btn5;
-}
-
-.btn6 {
-  grid-area: btn6;
+  scale: 1.03;
 }
 
 @media (max-width: 850px) {
   .paginas {
-    grid-template-areas: 
-    "btn1 btn2"
-    "btn3 btn4"
-    "btn5";
-  }
-}
-
-@media (max-width: 550px) {
-  .paginas {
-    scale: .9;
-    justify-content: center;
-    align-items: center;
     height: auto;
-    gap: 10px;
-  }
-
-  .paginas > button:hover {
-    scale: 1;
   }
 }
 
-@media (max-width: 490px) {
-  .paginas {
-    grid-template-areas: 
-    "btn1"
-    "btn2"
-    "btn3"
-    "btn4"
-    "btn5";
-    scale: 1;
-  }
+@media (max-width: 620px) {
   .paginas > button {
-    width: 80vw;
+    width: 70vw;
   }
   .paginas > button > h2 {
     font-size: 24px;
   }
   .paginas > button > p {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .paginas > button {
+    width: 80vw;
+    height: 170px;
   }
 }

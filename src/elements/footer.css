@@ -1,8 +1,9 @@
 .footer {
     background-color: #ffffff15;
     text-align: center;
-    padding: 20px;
+    padding-block: 20px;
     margin-top: 30px;
+    width: 100%;
 }
 
 .footerText {

@@ -50,7 +50,7 @@ const MainRoute = () => {
   }
 
   return (
-    <div>
+    <div className='mainInitContent'>
       <Header />
 
       <div className="mainInit">

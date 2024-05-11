@@ -1,15 +1,39 @@
 .supportContent {
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 .leftBoxSupport > form {
     display: flex;
     flex-direction: column;
     color: #fdfdfd;
+    margin-inline: 10px;
+}
+
+.leftBoxSupport > form > h2 {
+    color: #cc39a4;
+    margin: 5px;
+    margin-top: 20px;
+    font-size: 50px;
 }
 
 .leftBoxSupport > form > input, .leftBoxSupport > form > textarea {
     background-color: transparent;
     border: 2px solid #C77AB2;
-    width: 500px;
+    max-width: 600px;
+    color: #fdfdfd;
+    padding: 5px;
+    outline: none;
+    margin: 5px;
+}
+
+.leftBoxSupport > form > textarea {
+    height: 200px;
+}
+
+.leftBoxSupport > form > p {
+    margin: 5px;
+    font-size: 14px;
+    max-width: 600px;
 }

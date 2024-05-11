@@ -43,12 +43,15 @@ const Support = () => {
         <div className="supportContent">
             <div className="leftBoxSupport">
               <form className="formEmail" onSubmit={sendEmail}>
+                <h2>Suporte</h2>
+                <p>Precisa entrar em contato com o suporte do Mind? Basta colocar os dados abaixo e você em breve receberá uma resposta e uma resolução para o seu problema! Se preferir você pode enviar um email manualmente para o email abaixo do formulário.</p>
                 <input 
                   className="input"
                   type="text"
                   placeholder="Digite seu nome"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
+                  required
                 />
         
                 <input 
@@ -57,6 +60,7 @@ const Support = () => {
                   placeholder="Digite seu email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
+                  required
                 />
 
                 <textarea 
@@ -64,6 +68,7 @@ const Support = () => {
                   placeholder="Digite sua mensagem..."
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
+                  required
                 />
 
                 <input className="buttonSubmit" type="submit" value="Enviar" />
