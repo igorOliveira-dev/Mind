@@ -77,8 +77,8 @@ const Header = () => {
           <Link className='menuLink' to="/se-entenda">Se entenda</Link>
           <Link className='menuLink' to="/saude-geral">Saúde geral</Link>
           <Link className='menuLink' to="/condicoes-mentais">Condições mentais</Link>
-          <Link className='menuLink' to="/">Link 5</Link>
-          <Link className='menuLink' to="/">Link 6</Link>
+          <Link className='menuLink' to="/comunity">Comunidade</Link>
+          <Link className='menuLink' to="/support">Suporte</Link>
           {user ? (
           <>
             <Link className='linkToMyAccount' to="my-account">Minha conta</Link>
