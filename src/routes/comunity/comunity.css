@@ -1,3 +1,106 @@
-.comunityTitle {
-    color: #cf30b4;
+.messageForm {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 1vw;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.textMessageInput {
+    background-color: #222;
+    border: 1px solid #fdfdfd90;
+    padding: 7px;
+    margin-right: 7px;
+    width: 100%;
+    color: #fdfdfd;
+}
+
+.comunitySubmitForm {
+    background-color: #222;
+    border: 1px solid #fdfdfd90;
+    padding: 7px;
+    color: #fdfdfd;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 10vw;
+    min-width: 80px;
+}
+
+@media (max-width: 450px) {
+    .leftHeaderComunity > h1 {
+        display: none;
+    }
+}
+
+.messagesBox {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 100px;
+    color: #fdfdfd;
+    margin-bottom: 180px;
+    margin-top: 15px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message {
+    padding: 10px;
+    background-color: #222;
+    border: 1px solid #fdfdfd80;
+    margin-inline: 5px;
+    margin-block: 7px;
+    width: 80vw;
+}
+
+.loadMoreMessages {
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid #cc39a4;
+    color: #cc39a4;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.importantMessageComunity {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid #fdfdfd80;
+}
+
+.importantMessageComunity > h1 {
+    color: rgb(177, 0, 0);
+}
+
+.importantMessageComunity > p {
+    color: #fdfdfd;
+    width: 500px;
+    max-width: 70vw;
+}
+
+.btnCloseImportantMessageComunity {
+    padding: 5px;
+    background-color: transparent;
+    border: 3px solid red;
+    color: red;
+    margin-top: 10px;
+    width: 100px;
+    font-weight: bolder;
+    transition: .4s;
+}
+
+.btnCloseImportantMessageComunity:hover {
+    background-color: rgba(255, 0, 0, 0.15);
 }
