@@ -81,7 +81,7 @@ const Header = () => {
           <Link className='menuLink' to="/support">Suporte</Link>
           {user ? (
           <>
-            <Link className='linkToMyAccount' to="my-account">Minha conta</Link>
+            <Link className='linkToMyAccount' to="/my-account">Minha conta</Link>
             <button onClick={handleLogout} className='logoutBtn'>Sair</button>
           </>
           ) : (
